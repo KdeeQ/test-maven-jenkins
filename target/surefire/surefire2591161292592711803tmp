@@ -1,0 +1,28 @@
+#surefire
+#Wed Apr 16 13:31:18 EEST 2014
+testClassesDirectory=/home/kq/Desktop/AMK/HelloMaven/hello/target/test-classes
+classPathUrl.3=/home/kq/.m2/repository/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar
+classPathUrl.2=/home/kq/.m2/repository/org/slf4j/slf4j-simple/1.6.4/slf4j-simple-1.6.4.jar
+useManifestOnlyJar=true
+classPathUrl.1=/home/kq/Desktop/AMK/HelloMaven/hello/target/classes
+reportsDirectory=/home/kq/Desktop/AMK/HelloMaven/hello/target/surefire-reports
+classPathUrl.0=/home/kq/Desktop/AMK/HelloMaven/hello/target/test-classes
+dirscanner.0=directoryScannerOptions
+providerConfiguration=org.apache.maven.surefire.junit.JUnit3Provider
+testSuiteDefinitionTestSourceDirectory=/home/kq/Desktop/AMK/HelloMaven/hello/src/test/java
+surefireClassPathUrl.1=/home/kq/.m2/repository/org/apache/maven/surefire/surefire-api/2.7.1/surefire-api-2.7.1.jar
+surefireClassPathUrl.0=/home/kq/.m2/repository/org/apache/maven/surefire/surefire-junit3/2.7.1/surefire-junit3-2.7.1.jar
+report.2=org.apache.maven.surefire.report.XMLReporter
+useSystemClassLoader=true
+report.1=org.apache.maven.surefire.report.BriefFileReporter
+report.0=org.apache.maven.surefire.report.ForkingConsoleReporter
+excludes0=**/*$*
+isTrimStackTrace=true
+dirscanner.0.params=/home/kq/Desktop/AMK/HelloMaven/hello/target/test-classes|[**/Test*.java, **/*Test.java, **/*TestCase.java]|[**/*$*]
+enableAssertions=true
+includes2=**/*TestCase.java
+failIfNoTests=false
+includes1=**/*Test.java
+dirscanner.0.types=java.io.File|java.util.ArrayList|java.util.ArrayList
+includes0=**/Test*.java
+childDelegation=false
