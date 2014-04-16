@@ -11,6 +11,7 @@ public class Hello {
 	 */
 	public static void main(String[] args) {
 		org.slf4j.Logger logger = LoggerFactory.getLogger(Hello.class);
+		logger.trace("Main starting");
 		logger.info("Hello Maven!");
 
 	}
