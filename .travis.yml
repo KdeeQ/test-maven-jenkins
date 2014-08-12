@@ -6,6 +6,9 @@ jdk:
 env:
   global:
   - secure: Go4VWA/05IO3ep7DUP0XtYrSKMQRS+MNYkdh1COaT2VR+/kyIMbB+8nXjxVhEYx7IguLM4UmVl7+tObiehsmOlIaYJgoyBvUhJXrZfjxHXThhc5F7FDJocb0ExZ2TqV2MWUORIKOZHpSBbpT4sPMDE6iHIoP3asjfjXa6NJiEPo=
-  - secure: ZDQTUYvf3sbw3jio0e+xOa/zZEfWZcf+vaGDN11j/IMhfbi74YoOsizG/hfUUVAjjNRudnZrdHq0U0wuA3DgwAmaK62EAhRcaPznSJg3nHYYU+zZvQ90Obc9fH+USVsYhZsWcSGFbuyjfPsMBTrxeB1C+hFBFuvXlwAqHVyiGQA=
+  - 
 addons:
-  sauce_connect: true
+  sauce_connect:
+	username:kdeeq 
+	access_key:
+	secure: ZDQTUYvf3sbw3jio0e+xOa/zZEfWZcf+vaGDN11j/IMhfbi74YoOsizG/hfUUVAjjNRudnZrdHq0U0wuA3DgwAmaK62EAhRcaPznSJg3nHYYU+zZvQ90Obc9fH+USVsYhZsWcSGFbuyjfPsMBTrxeB1C+hFBFuvXlwAqHVyiGQA=
