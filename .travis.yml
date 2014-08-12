@@ -9,6 +9,6 @@ env:
   - 
 addons:
   sauce_connect:
-	username:kdeeq 
-	access_key:
-	secure: ZDQTUYvf3sbw3jio0e+xOa/zZEfWZcf+vaGDN11j/IMhfbi74YoOsizG/hfUUVAjjNRudnZrdHq0U0wuA3DgwAmaK62EAhRcaPznSJg3nHYYU+zZvQ90Obc9fH+USVsYhZsWcSGFbuyjfPsMBTrxeB1C+hFBFuvXlwAqHVyiGQA=
+    username:kdeeq 
+    access_key:
+     secure: ZDQTUYvf3sbw3jio0e+xOa/zZEfWZcf+vaGDN11j/IMhfbi74YoOsizG/hfUUVAjjNRudnZrdHq0U0wuA3DgwAmaK62EAhRcaPznSJg3nHYYU+zZvQ90Obc9fH+USVsYhZsWcSGFbuyjfPsMBTrxeB1C+hFBFuvXlwAqHVyiGQA=
