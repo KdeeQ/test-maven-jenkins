@@ -1,14 +1,10 @@
 language: java
 jdk:
-  - oraclejdk7
-  - openjdk7
-  - openjdk6
+- oraclejdk7
+- openjdk6
 env:
   global:
-  - secure: Go4VWA/05IO3ep7DUP0XtYrSKMQRS+MNYkdh1COaT2VR+/kyIMbB+8nXjxVhEYx7IguLM4UmVl7+tObiehsmOlIaYJgoyBvUhJXrZfjxHXThhc5F7FDJocb0ExZ2TqV2MWUORIKOZHpSBbpT4sPMDE6iHIoP3asjfjXa6NJiEPo=
-  - 
+  - secure: B/EziRXlIeuw0VsY+plwtQoVS/uDT1PQP3hePPkKFC5P1Jt7a3KOmugAYTM/eRtQXkLyPfFhqRzWqzE5MUaTzkty+jbbOIcFa5fa2TPtQCcWEWWmZYOi+CkylDtwiuYELNIaMvxosI+opPnPtEF3t5CDuu4tJ8I6u2p/e77a+iI=
+  - secure: LPM+GWoak4FHICRrN1UdRbJu04q2TwNyVPEs3G1VJgrEfKXVv6dquzi7L3vZcE49qFh5WcTT8ypECrIYf10qXqVPdvp++qyGKnF6o9rUahpGWZFsWA9711/x/skMgE2+PmylZWDR+QUX+WqJJcKbdKHRgdAZV9vggZ9eab4XgUA=
 addons:
-  sauce_connect:
-    username:kdeeq 
-    access_key:
-     secure: ZDQTUYvf3sbw3jio0e+xOa/zZEfWZcf+vaGDN11j/IMhfbi74YoOsizG/hfUUVAjjNRudnZrdHq0U0wuA3DgwAmaK62EAhRcaPznSJg3nHYYU+zZvQ90Obc9fH+USVsYhZsWcSGFbuyjfPsMBTrxeB1C+hFBFuvXlwAqHVyiGQA=
+  sauce_connect: true
