@@ -2,6 +2,7 @@ package fi.qvickstream;
 
 
 import com.saucelabs.common.SauceOnDemandAuthentication;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
 import com.saucelabs.junit.Parallelized;
 import com.saucelabs.junit.ConcurrentParameterized;
 import com.saucelabs.junit.SauceOnDemandTestWatcher;
@@ -23,6 +25,7 @@ import static org.junit.Assert.assertEquals;
 
 import com.saucelabs.common.SauceOnDemandAuthentication;
 import com.saucelabs.common.SauceOnDemandSessionIdProvider;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -43,43 +46,61 @@ import static org.junit.Assert.assertEquals;
  * <p/>
  * The test also includes the {@link SauceOnDemandTestWatcher} which will invoke the Sauce REST API to mark
  * the test as passed or failed.
- *
- * @author Ross Rowe
+ * 
+ * Sauce labsin demoluokkasta editoitu versio missä testataan JUnitin avulla Webdriverin käyttöä eli käyttöliittymän testausta.
+ * Demossa erilaisten selainten käytön esimerkkejä ja Sauce labisin omien luokkien käyttöä testidatan saamiseksi. 
+ * @author Ross Rowe ja fin Kdeeq
  */
 @RunWith(ConcurrentParameterized.class)
 public class TestD implements SauceOnDemandSessionIdProvider {
 
-    /**
+    private static final String SAUCELABTEST = TestD.class.toString();
+
+	/**
      * Constructs a {@link SauceOnDemandAuthentication} instance using the supplied user name/access key.  To use the authentication
      * supplied by environment variables or from an external file, use the no-arg {@link SauceOnDemandAuthentication} constructor.
+     * 
+     * Kirjautumisluokka joka ottaa parametreinä käyttäjä tunnukset. Tunnukset hoitaa TravisCI:n .travis.yml luokassa olevat
+     * cryptatut tunnukset, joten niitä ei tässä tarvita.
      */
     public SauceOnDemandAuthentication authentication = new SauceOnDemandAuthentication();
 
     /**
      * JUnit Rule which will mark the Sauce Job as passed/failed when the test succeeds or fails.
+     * JUnit sääntö joka merkkaa Sauce testin hylätyksi tai läpi menneeksi.
      */
     @Rule
     public SauceOnDemandTestWatcher resultReportingTestWatcher = new SauceOnDemandTestWatcher(this, authentication);
 
     /**
      * Represents the browser to be used as part of the test run.
+     * 
+     * Käyttöliittymä
      */
     private String browser;
     /**
      * Represents the operating system to be used as part of the test run.
+     * 
+     * Käyttöjarjestelmä
      */
     private String os;
     /**
      * Represents the version of the browser to be used as part of the test run.
+     * 
+     * Käyttöliittymän versio numero
      */
     private String version;
     /**
      * Instance variable which contains the Sauce Job Id.
+     * 
+     * Testin id
      */
     private String sessionId;
 
     /**
      * The {@link WebDriver} instance which is used to perform browser interactions with.
+     * 
+     * Koneluokka joka ajaa käyttöliittymää
      */
     private WebDriver driver;
 
@@ -101,6 +122,8 @@ public class TestD implements SauceOnDemandSessionIdProvider {
     /**
      * @return a LinkedList containing String arrays representing the browser combinations the test should be run against. The values
      * in the String array are used as part of the invocation of the test constructor
+     * 
+     * Tässä asetetaan halutut käyttöliittymät ja Käyttöjärjestelmät sekä eri versiot joita halutaan testata.
      */
     @ConcurrentParameterized.Parameters
     public static LinkedList browsersStrings() {
@@ -117,6 +140,8 @@ public class TestD implements SauceOnDemandSessionIdProvider {
      * the username and access key populated by the {@link #authentication} instance.
      *
      * @throws Exception if an error occurs during the creation of the {@link RemoteWebDriver} instance.
+     * 
+     * Esivalmistelu luokka jossa Sauce labsissä näkyvä testin nimi jonka muutin luokan nimeksi ja tulevaisuudessa metodin nimeksi.
      */
     @Before
     public void setUp() throws Exception {
@@ -127,7 +152,7 @@ public class TestD implements SauceOnDemandSessionIdProvider {
             capabilities.setCapability(CapabilityType.VERSION, version);
         }
         capabilities.setCapability(CapabilityType.PLATFORM, os);
-        capabilities.setCapability("name", "Sauce Sample Test");
+        capabilities.setCapability("name", SAUCELABTEST);
         this.driver = new RemoteWebDriver(
                 new URL("http://" + authentication.getUsername() + ":" + authentication.getAccessKey() + "@ondemand.saucelabs.com:80/wd/hub"),
                 capabilities);
@@ -138,6 +163,8 @@ public class TestD implements SauceOnDemandSessionIdProvider {
     /**
      * Runs a simple test verifying the title of the amazon.com homepage.
      * @throws Exception
+     * 
+     * Eka testiluokka
      */
     @Test
     public void amazon() throws Exception {
@@ -149,6 +176,8 @@ public class TestD implements SauceOnDemandSessionIdProvider {
      * Closes the {@link WebDriver} session.
      *
      * @throws Exception
+     * 
+     * Testin lopettaminen ja sammutus
      */
     @After
     public void tearDown() throws Exception {
@@ -158,6 +187,8 @@ public class TestD implements SauceOnDemandSessionIdProvider {
     /**
      *
      * @return the value of the Sauce Job id.
+     * 
+     * Testin id muistista
      */
     @Override
     public String getSessionId() {
