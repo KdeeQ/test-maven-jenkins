@@ -2,6 +2,7 @@ language: java
 jdk:
 - oraclejdk7
 - openjdk6
+- openjdk7
 env:
   global:
   - secure: B/EziRXlIeuw0VsY+plwtQoVS/uDT1PQP3hePPkKFC5P1Jt7a3KOmugAYTM/eRtQXkLyPfFhqRzWqzE5MUaTzkty+jbbOIcFa5fa2TPtQCcWEWWmZYOi+CkylDtwiuYELNIaMvxosI+opPnPtEF3t5CDuu4tJ8I6u2p/e77a+iI=
