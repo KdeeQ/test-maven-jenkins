@@ -8,3 +8,9 @@ env:
   - secure: LPM+GWoak4FHICRrN1UdRbJu04q2TwNyVPEs3G1VJgrEfKXVv6dquzi7L3vZcE49qFh5WcTT8ypECrIYf10qXqVPdvp++qyGKnF6o9rUahpGWZFsWA9711/x/skMgE2+PmylZWDR+QUX+WqJJcKbdKHRgdAZV9vggZ9eab4XgUA=
 addons:
   sauce_connect: true
+notifications:
+  email:
+    recipients:
+      - kaj.qvickstrom@gmail.com
+    on_success: [always|never|change] # default: never
+    on_failure: [always|never|change] # default: change
