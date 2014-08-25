@@ -130,6 +130,7 @@ public class TestD implements SauceOnDemandSessionIdProvider {
         LinkedList browsers = new LinkedList();
         browsers.add(new String[]{"Windows 8.1", "11", "internet explorer"});
         browsers.add(new String[]{"OSX 10.8", "6", "safari"});
+        browsers.add(new String[]{"Windows XP", "31", "firefox"});
         return browsers;
     }
 
