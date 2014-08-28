@@ -52,9 +52,9 @@ import static org.junit.Assert.assertEquals;
  * @author Ross Rowe ja fin Kdeeq
  */
 @RunWith(ConcurrentParameterized.class)
-public class TestD implements SauceOnDemandSessionIdProvider {
+public class TestingSauceWebDriverIT implements SauceOnDemandSessionIdProvider {
 
-    private static final String SAUCELABTEST = TestD.class.toString();
+    private static final String SAUCELABTEST = TestingSauceWebDriverIT.class.toString();
 
 	/**
      * Constructs a {@link SauceOnDemandAuthentication} instance using the supplied user name/access key.  To use the authentication
@@ -112,7 +112,7 @@ public class TestD implements SauceOnDemandSessionIdProvider {
      * @param version
      * @param browser
      */
-    public TestD(String os, String version, String browser) {
+    public TestingSauceWebDriverIT(String os, String version, String browser) {
         super();
         this.os = os;
         this.version = version;
